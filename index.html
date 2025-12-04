@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>一起去公園 - 探索台灣，從公園開始！</title>
     <meta name="description" content="專為台灣親子家庭設計的公園探索 App，幫助家長發現附近優質的兒童遊樂場，記錄親子探索足跡。">
+    <meta name="apple-itunes-app" content="app-id=6755875100">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -236,6 +237,21 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    (function() {
+        var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        if (isIOS) {
+            var appStoreLinks = document.querySelectorAll('a[href*="apps.apple.com"]');
+            appStoreLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'itms-apps://apps.apple.com/tw/app/lets-go-park/id6755875100';
+                });
+            });
+        }
+    })();
+    </script>
 
 </body>
 
